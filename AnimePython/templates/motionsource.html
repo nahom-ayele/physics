@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: courier new;
+    font-size:20px;
+    padding-top:0px;
+  }
+  #hash{
+    height:100px;
+    font-size:50px;
+    color:black;
+    font-family: Segoe Script;
+  }
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    margin: 0 auto;
+    font-family: Tempus Sans ITC ;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size:15px;
+  }
+
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Tempus Sans ITC;
+    font-size:20px;
+  }
+
+  input[type=submit]:hover {
+    background-color: grey;
+  }
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-size:20px;
+    font-family:Segoe Script;
+  }
+  option {
+    font-size: 16px;
+    font-family: Segoe Script;
+    font-size:20px;
+  }
+  .xe:hover{
+    color:grey;
+  }
+  #draw{
+    background-color: black;
+    color: white;
+  }
+  #draw:hover {
+    background-color: grey;
+  }
+#choice_1{
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<section id="hash"><center><h1 class="xe">Plot-The-Motion</h1></center></section>
+<form action="/plot-the-motion" method="post">
+  <section id="disp_1"><label for="disp1">The displacement as a function of time (using python's rules of operations and variable "time"):</label><br>
+    <input type="text" id="disp1" name="disp1" ><br>
+    <label for="t1">Initial time:</label><br>
+    <input type="text" id="t1" name="t1" ><br><br>
+    <label for="t2">Final Time:</label><br>
+    <input type="text" id="t2" name="t2" ><br><br></section>
+ <br> <label for="choice_1">What do you wanna plot today?:</label><br>
+  <select id="choice_1" name="choice_1">
+    <option value="dis">Displacement</option>
+    <option value="vel"> Velocity</option>
+    <option value="acc"> Acceleration</option>
+  </select><br><br>
+  <input type="submit" value="Calculate">
+  
+</form>
+</body>
+</html>

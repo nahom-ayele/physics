@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-top: 0px;
+    background-color: #f2f2f2;
+  }
+  #hash{
+    height: 100px;
+    font-size: 50px;
+    color: #ff6600;
+    font-family: Impact, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ff6600;
+  }
+
+  input[type=submit] {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  input[type=submit]:hover {
+    background-color: #cc5500;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  option {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  label{
+    color: #ff6600;
+    font-family: Impact, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #draw{
+    background-color: #ff6600;
+    color: white;
+  }
+  
+  #draw:hover {
+    background-color: #cc5500;
+  }
+  
+  #choice_1{
+    cursor: pointer;
+  }
+
+/* Navigation Bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #ff6600;
+  color: white;}
+</style><title>Plot-The-Motion</title>
+</head>
+<body>
+<div class="navbar">
+  <a class="active" href="#">Plot the motion</a>
+  <a href="#">About Us</a>
+  <a href="#">Our Teacher</a>
+</div>
+
+<section id="hash"><center><h1 class="xe">Plot-The-Motion</h1></center></section>
+<form action="/plot-velocity" method="post">
+  <section id="vector_1"><label for="vector1">The initial position of your object:</label><br>
+  <input type="text" id="vector1" name="vector1" ><br>
+  <label for="vector2">The final position of your object:</label><br>
+  <input type="text" id="vector2" name="vector2" ><br><br>
+  <label for="vector3">Initial Time:</label><br>
+  <input type="text" id="vector3" name="vector3" ><br><br></section>
+  <section id="vector_2"><label for="vector4">Final Time:</label><br> 
+<input type="text" id="vector2" name="vector2" ><br><br>
+  <input type="submit" value="Plot Now">
+  
+</form>
+<script>
+// Function to validate form inputs
+function validateForm() {
+  // Get form inputs
+  var vector1 = document.getElementById("vector1").value;
+  var vector2 = document.getElementById("vector2").value;
+  var vector3 = document.getElementById("vector3").value;
+  var vector4 = document.getElementById("vector4").value;
+}
+  // Check if inputs are empty
+  if (vector1 == "" || vector2 == "" || vector3 == "" || vector4 == "") {
+    alert("Please fill in all fields.");
+    return false;
+  }
+  // Check if inputs are numbers
+  else if (isNaN(vector1) || isNaN(vector2) || isNaN(vector3) || isNaN(vector4)) {
+    alert("Please enter numbers only.");
+    return false;
+  }
+  // If all inputs are valid, submit form
+  else {
+    return true;
+  }
+
+
+// Add event listener to form submit button
+document.getElementById("submit").addEventListener("click", function(event) {
+  // Prevent default form submission
+  event.preventDefault();
+ }
+  // Call validateForm function
+  if (validateForm()) {
+    // Submit form
+    document.getElementById("form").submit();
+  }
+);
+</script>
+</body>
+</html>

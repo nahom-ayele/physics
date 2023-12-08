@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: courier new;
+    font-size:20px;
+    padding-top:0px;
+  }
+  #hash{
+    height:100px;
+    font-size:50px;
+    color:black;
+    font-family: Segoe Script;
+  }
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    margin: 0 auto;
+    font-family: Tempus Sans ITC ;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size:15px;
+  }
+
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Tempus Sans ITC;
+    font-size:20px;
+  }
+
+  input[type=submit]:hover {
+    background-color: grey;
+  }
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-size:20px;
+    font-family:Segoe Script;
+  }
+  option {
+    font-size: 16px;
+    font-family: Segoe Script;
+    font-size:20px;
+  }
+  .xe:hover{
+    color:grey;
+  }
+  #draw{
+    background-color: black;
+    color: white;
+  }
+  #draw:hover {
+    background-color: grey;
+  }
+#choice_1{
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<section id="hash"><center><h1 class="xe">Vector Input</h1></center></section>
+<form action="/calculate-vectors" method="post">
+  <section id="vector_1"><label for="vector1">X-Component of your first vector:</label><br>
+  <input type="text" id="vector1" name="vector1" placeholder="INTEGER ONLY"><br>
+  <label for="vector2">Y-Component of your first vector:</label><br>
+  <input type="text" id="vector2" name="vector2" placeholder="INTEGER ONLY"><br><br>
+  <label for="vector3">Z-Component of your first vector:</label><br>
+  <input type="text" id="vector3" name="vector3" placeholder="INTEGER ONLY"><br><br></section>
+  <section id="vector_2"><label for="vector4">X-Component of your second vector:</label><br>
+  <input type="text" id="vector4" name="vector4" placeholder="INTEGER ONLY"><br><br>
+  <label for="vector5">Y-Component of your second vector:</label><br>
+  <input type="text" id="vector5" name="vector5" placeholder="INTEGER ONLY"><br><br>
+  <label for="vector6">Z-Component of your second vector:</label><br>
+  <input type="text" id="vector6" name="vector6" placeholder="INTEGER ONLY"><br><br></section>
+ <br> <label for="choice_1">What do you wanna find?:</label><br>
+  <select id="choice_1" name="choice_1">
+    <option value="sum">Vector-Sum</option>
+    <option value="scalar product"> Scalar-Product</option>
+    <option value="vector product"> Vector-Product</option>
+  </select><br><br>
+  <input type="submit" value="Calculate">
+  
+</form>
+</body>
+</html>

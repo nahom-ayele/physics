@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Rockwell;
+    font-size:20px;
+    padding-top:0px;
+  }
+  #hash{
+    height:100px;
+    font-size:50px;
+    color:green;
+    font-family: Rockwell;
+  }
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    margin: 0 auto;
+    font-family: Rockwell ;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size:15px;
+    color:green;
+  }
+
+  input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Terminal;
+    font-size:20px;
+  }
+
+  input[type=submit]:hover {
+    background-color: darkgreen;
+  }
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-size:20px;
+    font-family:Rockwell;
+  }
+  option {
+    font-size: 16px;
+    font-family: Rockwell;
+    font-size:20px;
+  }
+ 
+label{
+    color:green;
+    font-family: Rockwell;
+}
+  #draw{
+    background-color: green;
+    color: white;
+  }
+  #draw:hover {
+    background-color: green;
+  }
+#choice_1{
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<section id="hash"><center><h1 class="xe">Plot-The-Motion</h1></center></section>
+<form action="/plot-velocity" method="post">
+  <section id="vector_1"><label for="vector1">The initial position of your object:</label><br>
+  <input type="text" id="vector1" name="vector1" ><br>
+  <label for="vector2">The final position of your object:</label><br>
+  <input type="text" id="vector2" name="vector2" ><br><br>
+  <label for="vector3">Initial Time:</label><br>
+  <input type="text" id="vector3" name="vector3" ><br><br></section>
+  <section id="vector_2"><label for="vector4">Final Time:</label><br> 
+<input type="text" id="vector2" name="vector2" ><br><br>
+  <input type="submit" value="Plot Now">
+  
+</form>
+</body>
+</html>
